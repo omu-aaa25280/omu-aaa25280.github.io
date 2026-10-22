@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Webシステム構築基礎</title>
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            
+            if (hours < 10) hours = '0' + hours;
+            if (minutes < 10) minutes = '0' + minutes;
+            if (seconds < 10) seconds = '0' + seconds;
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('clock').innerHTML = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+
+        window.onload = updateClock;
+    </script>
 </head>
 <body>
+<h1>現在時刻</h1>
+<div id="clock" style="font-size: 48px; font-weight: bold; color: blue;">
+        00:00:00
+</div>
 ＜img src = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjQ8uSDjaosA0wr99imLr2NdN7Z7qTw-CSQbk4W-I2rArxbPVATHUEK4dW3oiKpRpEgk
     TTjVIugXLS7IUvXjbkzDwFPrtHgNmKm7_gIbGA8qzQoYZSUg_vsld758Thy2yeSQhdhnbqGjig9/s800/syokuji_hashi_blank_man.png" width="300" height="600" alt="食事する男性の画像"
 <h2>食べ物リスト</h2>
