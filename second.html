@@ -5,10 +5,11 @@
 </head>
 <body>
   <h2>BMI計算機</h2>
-  <form oninput="naumber(bmi.value) = Math.round( number(weight.value)/Math.pow(number(height.value)/100,2)*10)/10"
+  <form oninput="bmi.value = Math.round( Number(weight.value)/Math.pow(Number(height.value)/100,2)*10)/10">
   <p>身長[cm]:</p> <input type="number" name="height">
   <p>体重[kg]:</p> <input type ="number" name="weight">
   <p>BMI:<output name="bmi" ></output></p>
+  </form>
 
 <h2>旅行先</h2>
 <ul>
